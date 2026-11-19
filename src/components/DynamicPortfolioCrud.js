@@ -22,13 +22,11 @@ export default function DynamicPortfolioCrud({ onDataUpdated }) {
   const [targetId, setTargetId] = useState('1');
   const [sendAsFormData, setSendAsFormData] = useState(false);
 
-  // Status & API Feedback
   const [loading, setLoading] = useState(false);
   const [apiLog, setApiLog] = useState(null);
   const [statusMessage, setStatusMessage] = useState(null);
   const [serverStatus, setServerStatus] = useState({ checked: false, online: false });
 
-  // Test server connectivity on load
   useEffect(() => {
     checkServer();
   }, []);
@@ -51,7 +49,6 @@ export default function DynamicPortfolioCrud({ onDataUpdated }) {
     }
   };
 
-  // Profile Field Handler
   const handleProfileChange = (field, value) => {
     setFormData((prev) => ({
       ...prev,
@@ -62,7 +59,6 @@ export default function DynamicPortfolioCrud({ onDataUpdated }) {
     }));
   };
 
-  // Experience Handlers
   const handleExpChange = (index, field, value) => {
     setFormData((prev) => {
       const updated = [...prev.experiences];
@@ -121,7 +117,6 @@ export default function DynamicPortfolioCrud({ onDataUpdated }) {
     });
   };
 
-  // Skill Category Handlers
   const handleCategoryNameChange = (catIndex, name) => {
     setFormData((prev) => {
       const updated = [...prev.skill_categories];
@@ -168,7 +163,6 @@ export default function DynamicPortfolioCrud({ onDataUpdated }) {
     }));
   };
 
-  // Project Handlers
   const handleProjectChange = (projIndex, field, value) => {
     setFormData((prev) => {
       const updated = [...prev.projects];
@@ -219,7 +213,6 @@ export default function DynamicPortfolioCrud({ onDataUpdated }) {
     }));
   };
 
-  // Education Handlers
   const handleEduChange = (eduIndex, field, value) => {
     setFormData((prev) => {
       const updated = [...prev.educations];
@@ -251,7 +244,6 @@ export default function DynamicPortfolioCrud({ onDataUpdated }) {
     }));
   };
 
-  // Languages Handlers
   const handleLangChange = (lIndex, field, value) => {
     setFormData((prev) => {
       const updated = [...prev.languages];
@@ -274,11 +266,6 @@ export default function DynamicPortfolioCrud({ onDataUpdated }) {
     }));
   };
 
-  // -------------------------------------------------------------
-  // CRUD API Handlers
-  // -------------------------------------------------------------
-
-  // STORE: POST /portfolio
   const handleStore = async (e) => {
     e?.preventDefault();
     setLoading(true);
@@ -519,8 +506,8 @@ export default function DynamicPortfolioCrud({ onDataUpdated }) {
                 statusMessage.type === 'success'
                   ? 'FaCheckCircle'
                   : statusMessage.type === 'error'
-                  ? 'FaExclamationTriangle'
-                  : 'FaShieldAlt'
+                    ? 'FaExclamationTriangle'
+                    : 'FaShieldAlt'
               }
               size={16}
             />
