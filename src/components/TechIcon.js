@@ -50,6 +50,16 @@ import { FaKey } from '@react-icons/all-files/fa/FaKey';
 import { FaEye } from '@react-icons/all-files/fa/FaEye';
 import { FaEyeSlash } from '@react-icons/all-files/fa/FaEyeSlash';
 import { FaHandPeace } from '@react-icons/all-files/fa/FaHandPeace';
+import { FaPlus } from '@react-icons/all-files/fa/FaPlus';
+import { FaEdit } from '@react-icons/all-files/fa/FaEdit';
+import { FaTrash } from '@react-icons/all-files/fa/FaTrash';
+import { FaSync } from '@react-icons/all-files/fa/FaSync';
+import { FaCog } from '@react-icons/all-files/fa/FaCog';
+import { FaList } from '@react-icons/all-files/fa/FaList';
+import { FaTable } from '@react-icons/all-files/fa/FaTable';
+import { FaWifi } from '@react-icons/all-files/fa/FaWifi';
+import { FaExclamationTriangle } from '@react-icons/all-files/fa/FaExclamationTriangle';
+import { FaCloudUploadAlt } from '@react-icons/all-files/fa/FaCloudUploadAlt';
 
 const iconMap = {
   SiLaravel,
@@ -101,7 +111,17 @@ const iconMap = {
   FaKey,
   FaEye,
   FaEyeSlash,
-  FaHandPeace
+  FaHandPeace,
+  FaPlus,
+  FaEdit,
+  FaTrash,
+  FaSync,
+  FaCog,
+  FaList,
+  FaTable,
+  FaWifi,
+  FaExclamationTriangle,
+  FaCloudUploadAlt
 };
 
 export default function TechIcon({ name, className = '', size = 20, color, style = {} }) {

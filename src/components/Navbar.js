@@ -13,7 +13,7 @@ export default function Navbar({ theme, toggleTheme, onOpenResume, onLogout }) {
 
       const sections = ['hero', 'about',
         'skills',
-        'nexerp', 'architecture', 'experience', 'api-sandbox', 'contact'];
+        'nexerp', 'architecture', 'crud-manager', 'experience', 'api-sandbox', 'contact'];
       const scrollPos = window.scrollY + 120;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -31,10 +31,9 @@ export default function Navbar({ theme, toggleTheme, onOpenResume, onLogout }) {
 
   const navLinks = [
     { label: 'About', href: '#about', id: 'about' },
-    // { label: 'Skills', href: '#skills', id: 'skills' },
     { label: 'NexERP', href: '#nexerp', id: 'nexerp' },
     { label: 'Architecture', href: '#architecture', id: 'architecture' },
-    // { label: 'Experience', href: '#experience', id: 'experience' },
+    { label: 'CRUD Manager', href: '#crud-manager', id: 'crud-manager' },
     { label: 'API Sandbox', href: '#api-sandbox', id: 'api-sandbox' },
     { label: 'Contact', href: '#contact', id: 'contact' },
   ];

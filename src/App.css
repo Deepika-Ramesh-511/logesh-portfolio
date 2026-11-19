@@ -3779,3 +3779,776 @@
   60% { transform: rotate(14deg); }
   80% { transform: rotate(-4deg); }
 }
+
+/* ==========================================================================
+   Dynamic Portfolio CRUD Management Portal Styles
+   ========================================================================== */
+.crud-manager-section {
+  padding-top: 5rem;
+}
+
+.crud-portal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-hover);
+  border-radius: 24px;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-card);
+}
+
+.crud-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.api-config-strip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.server-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-subtle);
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.status-beacon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.beacon-green {
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+}
+
+.beacon-amber {
+  background: #f59e0b;
+  box-shadow: 0 0 10px #f59e0b;
+}
+
+.btn-ping {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-subtle);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-ping:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.endpoint-url-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.base-url-input {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+  font-family: var(--font-code);
+  color: var(--cyan-accent);
+  min-width: 310px;
+}
+
+.crud-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.target-id-box {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.target-id-input {
+  width: 48px;
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--laravel-red);
+}
+
+/* Laravel Route Actions Bar */
+.laravel-routes-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.75rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.route-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.btn-route-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-route-action:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: var(--border-hover);
+}
+
+.method-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  font-family: var(--font-code);
+}
+
+.method-post {
+  background: rgba(245, 158, 11, 0.18);
+  color: #f59e0b;
+}
+
+.method-put {
+  background: rgba(6, 182, 212, 0.18);
+  color: #06b6d4;
+}
+
+.method-get {
+  background: rgba(16, 185, 129, 0.18);
+  color: #10b981;
+}
+
+.method-delete {
+  background: rgba(239, 68, 68, 0.18);
+  color: #ef4444;
+}
+
+.btn-store:hover:not(:disabled) {
+  border-color: #f59e0b;
+}
+
+.btn-update:hover:not(:disabled) {
+  border-color: #06b6d4;
+}
+
+.btn-show:hover:not(:disabled) {
+  border-color: #10b981;
+}
+
+.btn-destroy:hover:not(:disabled) {
+  border-color: #ef4444;
+}
+
+.format-toggle-group {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+/* Crud Alerts */
+.crud-alert {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 1.25rem 1.75rem 0 1.75rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.alert-success {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+}
+
+.alert-error {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.alert-warning {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #f59e0b;
+}
+
+.alert-info {
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  color: #06b6d4;
+}
+
+/* Tabs Strip */
+.crud-tabs-strip {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem 1.75rem 0 1.75rem;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.crud-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.15rem;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.crud-tab:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.crud-tab.active {
+  color: var(--laravel-red);
+  background: var(--bg-card);
+  border-color: var(--border-subtle);
+  border-bottom-color: var(--bg-card);
+  position: relative;
+}
+
+.crud-tab.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: var(--laravel-gradient);
+  border-radius: 4px 4px 0 0;
+}
+
+/* Form Body */
+.crud-form-body {
+  padding: 2rem 1.75rem;
+}
+
+.form-sub-panel {
+  animation: fadeIn 0.25s ease;
+}
+
+.panel-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.panel-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  font-family: var(--font-code);
+  color: var(--text-primary);
+}
+
+.field-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.form-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--laravel-red);
+  box-shadow: 0 0 10px rgba(255, 45, 32, 0.2);
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+/* Dynamic Cards List */
+.dynamic-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dynamic-entry-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease;
+}
+
+.dynamic-entry-card:hover {
+  border-color: var(--border-hover);
+}
+
+.entry-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.entry-number-badge {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--cyan-accent);
+  font-family: var(--font-code);
+}
+
+.btn-remove-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-remove-entry:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* Highlights editor */
+.highlights-editor-section {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.highlights-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.highlights-header label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.btn-add-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-add-mini:hover {
+  background: #10b981;
+  color: #fff;
+}
+
+.highlights-inputs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.highlight-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hl-bullet {
+  color: var(--laravel-red);
+  font-weight: 800;
+}
+
+.highlight-input-row input {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.84rem;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.highlight-input-row input:focus {
+  border-color: var(--laravel-red);
+}
+
+.btn-del-mini {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.btn-del-mini:hover {
+  color: #ef4444;
+}
+
+/* Skills tags section */
+.skills-tags-section {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.skills-tags-section label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.tags-chips-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.skill-edit-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 45, 32, 0.12);
+  border: 1px solid rgba(255, 45, 32, 0.3);
+  color: var(--laravel-red);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.tag-close-btn {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.tag-close-btn:hover {
+  color: #ef4444;
+}
+
+.add-tag-inline-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 320px;
+}
+
+.add-tag-inline-form input {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.year-pair-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.year-pair-row input {
+  flex: 1;
+}
+
+.language-inline-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* API Inspector */
+.api-inspector-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 1.5rem;
+}
+
+.bracket-preview-box,
+.traffic-log-box {
+  background: #0d1117;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.25rem;
+  font-family: var(--font-code);
+}
+
+.box-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #8b949e;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bracket-code-block,
+.json-code-block {
+  max-height: 420px;
+  overflow-y: auto;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #79c0ff;
+}
+
+.transaction-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.txn-meta-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+}
+
+.txn-url {
+  color: #e6edf3;
+  word-break: break-all;
+}
+
+.txn-status {
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  font-weight: 800;
+}
+
+.status-ok {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.status-err {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.txn-latency {
+  color: #f59e0b;
+}
+
+.local-fallback-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.74rem;
+  color: #58a6ff;
+  background: rgba(56, 139, 253, 0.15);
+  border: 1px solid rgba(56, 139, 253, 0.3);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+}
+
+.empty-log-hint {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #8b949e;
+  font-size: 0.85rem;
+}
+
+/* Footer persistent actions */
+.crud-footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-status-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.dot-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--laravel-red);
+}
+
+.footer-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .crud-top-bar,
+  .laravel-routes-bar,
+  .crud-footer-bar,
+  .api-inspector-grid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .base-url-input {
+    min-width: 100%;
+  }
+
+  .language-inline-row {
+    grid-template-columns: 1fr;
+  }
+}

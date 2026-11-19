@@ -9,6 +9,7 @@ import StatsBar from './components/StatsBar';
 import About from './components/About';
 import Projects from './components/Projects';
 import ArchitectureViewer from './components/ArchitectureViewer';
+import DynamicPortfolioCrud from './components/DynamicPortfolioCrud';
 import ApiSandbox from './components/ApiSandbox';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
@@ -82,6 +83,7 @@ function App() {
         <About />
         <Projects />
         <ArchitectureViewer />
+        <DynamicPortfolioCrud />
         <ApiSandbox />
         <Skills />
         <Experience />
